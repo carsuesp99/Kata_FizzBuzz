@@ -28,4 +28,24 @@ public class FizzBuzz {
             return false;
         }
     }
+
+    public boolean contieneElCinco(int n){
+
+        String numero = Integer.toString(n);
+        if(numero.contains("5")){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean contieneElTres(int n){
+
+        String numero = Integer.toString(n);
+            if(numero.contains("3")){
+                return true;
+            } else {
+                return false;
+            }
+        }
 }

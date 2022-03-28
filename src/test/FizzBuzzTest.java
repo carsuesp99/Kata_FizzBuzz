@@ -30,4 +30,18 @@ public class FizzBuzzTest {
         assertEquals(fizzBuzz.esMultiploDeTresYCinco(30), true);
     }
 
+    @Test
+    void contiene_el_numero_tres(){
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.contieneElTres(23), true);
+    }
+
+    @Test
+    void contiene_el_numero_cinco(){
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.contieneElCinco(45), true);
+    }
+
 }
