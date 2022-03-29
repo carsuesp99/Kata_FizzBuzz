@@ -2,50 +2,28 @@ package main;
 
 public class FizzBuzz {
 
-    public boolean esMultiploDeTres(int n){
-
-        if(n % 3 == 0){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean esMultiploDeCinco(int n){
-
-        if(n % 5 == 0){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean esMultiploDeTresYCinco(int i){
+    public String imprimir(int i){
 
         if(esMultiploDeTres(i) && esMultiploDeCinco(i)){
-            return true;
-        } else {
-            return false;
+            return "FizzBuzz";
         }
+        if(esMultiploDeCinco(i)){
+            return "Buzz";
+        }
+        if(esMultiploDeTres(i)){
+            return "Fizz";
+        }
+
+        return String.valueOf(i);
     }
 
-    public boolean contieneElCinco(int n){
-
-        String numero = Integer.toString(n);
-        if(numero.contains("5")){
-            return true;
-        } else {
-            return false;
-        }
+    public boolean esMultiploDeTres(int i){
+        return i % 3 == 0;
     }
 
-    public boolean contieneElTres(int n){
+    public boolean esMultiploDeCinco(int i){
+        return i % 5 == 0;
+    }
 
-        String numero = Integer.toString(n);
-            if(numero.contains("3")){
-                return true;
-            } else {
-                return false;
-            }
-        }
+
 }

@@ -2,46 +2,48 @@ package test;
 
 import main.FizzBuzz;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
 import static org.testng.AssertJUnit.assertEquals;
 //import static org.junit.jupiter.api.Assertions.*;
 
 public class FizzBuzzTest {
 
-    @Test
-    void test_multiplo_de_tres(){
+    FizzBuzz fizzBuzz;
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals(fizzBuzz.esMultiploDeTres(3), true);
+    @Test
+    void uno_devuelve_uno(){
+
+        fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.imprimir(1), "1");
     }
 
     @Test
-    void test_multiplo_de_cinco(){
+    void dos_devuelve_dos(){
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals(fizzBuzz.esMultiploDeCinco(5), true);
-
+        fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.imprimir(2), "2");
     }
 
     @Test
-    void test_multiplo_tres_y_cinco(){
+    void tres_devuelve_fizz(){
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals(fizzBuzz.esMultiploDeTresYCinco(30), true);
+        fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.imprimir(3), "Fizz");
     }
 
     @Test
-    void contiene_el_numero_tres(){
+    void cinco_devuelve_buzz(){
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals(fizzBuzz.contieneElTres(23), true);
+        fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.imprimir(5), "Buzz");
     }
 
     @Test
-    void contiene_el_numero_cinco(){
+    void quince_devuelve_fizzbuzz(){
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals(fizzBuzz.contieneElCinco(45), true);
+        fizzBuzz = new FizzBuzz();
+        assertEquals(fizzBuzz.imprimir(15), "FizzBuzz");
     }
 
 }

@@ -7,15 +7,8 @@ public class main {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         for(int i=1; i<=100;i++){
-            if(fizzBuzz.esMultiploDeTresYCinco(i)){
-                System.out.println("FizzBuzz");
-            } else if (fizzBuzz.esMultiploDeCinco(i) || fizzBuzz.contieneElCinco(i)){
-                System.out.println("Buzz");
-            } else if (fizzBuzz.esMultiploDeTres(i) || fizzBuzz.contieneElTres(i)){
-                System.out.println("Fizz");
-            } else{
-                System.out.println(i);
-            }
+            System.out.println(fizzBuzz.imprimir(i));
         }
+
     }
 }
