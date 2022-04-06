@@ -46,4 +46,18 @@ public class FizzBuzzTest {
         assertEquals(fizzBuzz.imprimir(15), "FizzBuzz");
     }
 
+    @Test
+    void contiene_numero_tres(){
+
+        fizzBuzz = new FizzBuzz();
+        assertEquals("Fizz", fizzBuzz.imprimir(34));
+    }
+
+    @Test
+    void contiene_numero_cinco(){
+
+        fizzBuzz = new FizzBuzz();
+        assertEquals("Buzz", fizzBuzz.imprimir(75));
+    }
+
 }
